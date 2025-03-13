@@ -74,3 +74,54 @@
 
 
 // ================================================================================
+// 6. Function Scope and Closures
+
+
+// function outer() {
+//   var outerVar = "outer";
+//   return function inner() {
+//     console.log(outerVar);
+//   };
+// }
+// var innerFunc = outer();
+// innerFunc();
+
+// ans is outer
+// ================================================================================
+// 7. Variable Shadowing
+
+
+
+// let a = 10;
+// function shadow() {
+//   let a = 5;
+//   console.log(a);
+// }
+// shadow();
+// console.log(a);
+// ans is 5 10
+
+// ================================================================================
+
+// 8. Closure and Multiple Functions
+
+
+// function outerFunc() {
+//   let count = 0;
+//   return {
+//     increment: function() {
+//       count++;
+//       console.log(count);
+//     },
+//     decrement: function() {
+//       count--;
+//       console.log(count);
+//     }
+//   };
+// }
+
+// let counter = outerFunc();
+// counter.increment();
+// counter.decrement();
+
+// ans is 1 nd 0
