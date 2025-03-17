@@ -284,3 +284,107 @@
 // console.log(x);
 // ans is 10 5 because x is 10 in block and x is 5 outside block
 
+// ================================================================================
+
+// 21. Closures and Lexical Scope
+
+// function outer(){
+//     let a=1;
+//     function inner(){
+//         console.log(a);
+//     }
+//     return inner;
+// }
+// let result = outer();
+// result();
+// ans is 1 because a is 1 in outer function
+// ================================================================================
+
+// 22. Hoisting in Function Expressions
+
+// console.log(typeof foo);
+// var foo = function(){
+//     return 5;
+// }
+// console.log(typeof foo);
+// console.log(foo());
+// ans is undefined because foo is not defined and then foo is defined and then foo is called so 5 is printed
+// ================================================================================
+
+
+// 23. Function Declaration Hoisting
+
+// function hoistFunc(){
+//     console.log(foo());
+//     function foo(){
+//         return 10;
+//     }
+// }
+// hoistFunc();
+// ans is 10 because foo is defined before calling foo so 10 is printed
+
+
+// ================================================================================
+
+// 24. Closures and Arguments
+
+// function createfunction(){
+//     let count=0;
+//     return function(){
+//         return ++count;
+//     };
+// }
+// const increment = createfunction();
+// console.log(increment());   
+// console.log(increment());
+// console.log(increment());
+// ans is 1 2 3 because count is 0 and increment is called so count is 1 and again increment is called so count is 2 and again increment is called so count is 3
+
+
+// ================================================================================
+
+// 25. Scope and Variable Shadowing
+
+// let x=10;
+// function checkScope(){
+//     let x=20;
+//     console.log(x);
+// }
+// checkScope();
+// console.log(x);
+// ans is 20 10 because x is 20 in function and x is 10 outside function
+// ================================================================================
+
+// 26. Immediate Invocation and Scope
+
+// (function(){
+//     var x=5;
+// })();
+// console.log(x);
+// ans is error because x is not defined
+// ================================================================================
+
+// 27. Closures with Nested Functions
+
+
+// function outerFunction() {
+//   var outerVar = "I'm outer";
+//   return function innerFunction() {
+//     console.log(outerVar);
+//   };
+// }
+// outerFunction()();
+// ans is I'm outer because outerVar is defined in outer function
+// ================================================================================
+
+// 28. Hoisting of Function Expressions
+
+
+// console.log(typeof func);
+// var func = function() {
+//   return 5;
+// };
+// ans is undefined because func is not defined
+
+
+
