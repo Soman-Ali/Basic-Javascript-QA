@@ -386,5 +386,94 @@
 // };
 // ans is undefined because func is not defined
 
+// ================================================================================
+// 29. Block Scope with Let
+
+// let x=10;
+// if(true){
+//     let x =20;
+//     console.log(x);
+// }
+// console.log(x);
+// ans is 20 10 because x is 20 in if block and x is 10 outside if block
+// ================================================================================
+
+// 30. Closures and State Management
+
+// function counter(){
+//     let count =0;
+//     return function(){
+//         return ++count;
+//     };
+// }
+// const increment =counter();
+// console.log(increment());
+// console.log(increment());
+// ans is 1 2 because count is 0 and increment is called so count is 1 and again increment is called so count is 2
+// ================================================================================
+
+// 31. Hoisting and Function Parameters
+
+// function testHoisting(param){
+//     console.log(param);
+//     var param = 20;
+// }
+// testHoisting(10);
+// ans is undefined because param is not defined
+
+// ================================================================================
+
+// 32. Variable Shadowing in Nested Functions
+
+// let a=1;
+// function outer(){
+//     let a=2;
+//     function inner(){
+//         console.log(a);
+//     }
+//     inner();
+// }
+// outer();
+// ans is 2 because a is 2 in inner function and 2 is printed
+// ================================================================================
+
+
+// 33. Closures with Multiple Functions
+
+// function createCounter(){
+//     let cpunt =0;
+//     return{
+//         increment:function(){
+//             count++;
+//             console.log(count);
+//         },
+//         decrement: function(){
+//             count--;
+//             console.log(count);
+//         }
+//     };
+// }
+// const counter=createCounter();
+// counter.increment();
+// counter.decrement();
+// ans is 1 0 because count is 0 and increment is called so count is 1 and decrement is called so count is 0
+
+// ================================================================================
+// 34. Lexical Scope and Closures
+
+// let a=1;
+// function outerFunc(){
+//     let a=22;
+//     return function(){
+//         console.log(a);
+//     };
+// }
+// let result=outerFunc();
+// result();
+// ans is 22 because a is 22 in outer function
+
+
+
+
 
 
